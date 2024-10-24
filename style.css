@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
 header {
     position: fixed;
     top: 0;
@@ -30,11 +34,11 @@ nav ul li a:hover {
 }
 
 body {
-    background-color: #121219;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.799), rgba(44, 16, 50, 0.717));
     color: #fff;
     font-family: sans-serif;
     padding: 0;
-    padding-top: 5rem;
+    /* padding-top: 5rem; */
     margin: 0;
 }
 
@@ -47,7 +51,8 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 102vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -55,15 +60,23 @@ section {
     opacity: 0;
     transition: all 1s;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Slide in from the left */
 }
-
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    transform: translateX(0); /* Move to the center */
 }
+
+/* New class for sections that are sliding out */
+.slide-out {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(100%); /* Slide out to the right */
+}
+
 
 @media(prefers-reduced-motion) {
     .hidden {
@@ -87,13 +100,50 @@ section {
     padding: 2rem;
 }
 
-#grad-start {    
-    background-image: linear-gradient(#12121924, rgba(215, 215, 215, 0.37));
+/* Style for the dropdown menu */
+.dropdown {
+    position: relative;
 }
 
-#grad-second {
-    background-image: linear-gradient(rgba(215, 215, 215, 0.37), rgba(120, 50, 135, 0.337));
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    list-style: none;
+    margin: 0;
+    top: 100%; /* Position below the main menu item */
+    left: 0;
+    width: 150px; /* Adjust the width of the dropdown as needed */
+    z-index: 100; /* Ensure it appears above other content */
 }
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Make it work on click for mobile devices */
+.dropdown-menu-active .dropdown-menu {
+    display: block;
+}
+
+
 
 .images {
     display: flex;

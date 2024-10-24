@@ -5,140 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guy Ginat</title>
-
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div> 
+
     <header>
         <nav>
             <ul>
-                <li><a href="#grad-start">About Me</a></li>
-                <li><a href="#grad-second">Games</a></li>
-                <li><a href="#web-section">Web</a></li>
-                <li><a href="#music-section">Music</a></li>
-                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#" data-page="about">About Me</a></li>
+                <li class="dropdown">
+                    <a href="#" data-page="games">Games</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-page="game1">Game 1</a></li>
+                        <li><a href="#" data-page="game2">Game 2</a></li>
+                        <li><a href="#" data-page="game3">Game 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-page="web">Web</a></li>
+                <li><a href="#" data-page="music">Music</a></li>
+                <li><a href="#" data-page="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div id="particles-js"></div>   
 
-    <section id="grad-start">
-        <div class="hidden about">
-            About Me
-            <p>
-                <h2>Hi!</h2>                
-                <br/>
-                My name is Guy and I am a game developer / web tinkerer / aspiering musician
-                <br/>
-                (I like to stay busy 😁)
-                <br/>
-                <br/>
-                I like to create products with value to others, may be a tool to ease your life, or an experience
-            </p>
-        </div>
-    </section>
-    <section id="grad-second">
-        <div class="games hidden">
-            <h2>Games</h2>
-            <div>
-                <p>These days I am a game developer working for a mobile games company, 
-                    in my spare time, I build games solo and try and find interesting mechanics
-                    that can be fun to play around
-                    <br>You can play them on my <a href="https://guyginat.itch.io/">itch.io</a> page
-                </p>
-                <br>
-                <br>
-                <br>
-                <div>
-                    <h3>Spinning Roles</h3>
-                    <p>Spinning Roles is my submission to the <span style="font-weight: bolder;">2022 GMTK Game Jam</span><br>
-                        <br>Built around the theme of <span style="font-style: italic">Roll Of The Dice</span><br>
-                        I wanted to build a game that does not use the classical definition of a dice, utilizing mechanics of randomness,
-                        <br>but rather focus on what happens when the dice rolls, resulting in a gravity based 3D puzzle game
-                    </p>
-                    <div class="images">
-                        <img src="./assets/roles1.jpg" alt="" height="300">
-                        <img src="./assets/roles-gamplay.PNG" alt="" height="300">
-                        <img src="./assets/roles-menu.PNG" alt="" height="300">
-                        <img src="./assets/roles-gif.gif" alt="" height="300">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <div>
-                    <h3>Berto</h3>
-                    <p>Berto is a <span style="font-weight: bolder;">Keyboard Rage Game</span><br>
-                        <br>Berto is a game where you controll a small pink guy, moving him across pillars<br>
-                        that correspond to keyboard keys, crossing difficult keyboard traversing gauntlets and badass boss fights 
-                        <br>The idea came from trying to utilize the whole keyboard, making it some sort of playground for your fingers
-                        <br><br>This is not a typing game
-                    </p>
-                    <div class="images">
-                        <img src="./assets/gold_fall.gif" alt="" height="300">
-                        <img src="./assets/berto2.png" alt="" height="300">
-                        <img src="./assets/sky_success.gif" alt="" height="300">
-                        <img src="./assets/berto3.png" alt="" height="300">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hidden">
-        <div class="web" id="web-section">
-            <h2>Web</h2>
-            <div>
-                <p>Before stating to work in games, I built web applications and tools, working full time as a fullstack web 
-                    <br>developer, for a while full time and than transitioned to taking freelancing jobs
-                </p>
-                <div>
-                    <h3>Super Session</h3>
-                    <img src="" alt="" width="200" height="200">
-                    <p>Super Session - A full text search engine on your own YouTube history<br>
-                        <br>Working in my spare time on games I referred to many YouTube videos, working with different
-                        <br>softwares for the first time required the help of many excellent content creators (god bless their souls)
-                        <br>I needed a way to retrieve these pieces of knowledge, so came Super Session, a chrome extention that 
-                        <br>utilizes ElasticSearch to save all captions in YouTube videos you watch, allowing you to search for specific 
-                        <br>moments in video using keyword search
-                        <br>
-                        <br>Made using React, Express, ElasticSearch and a couple of long nights
-                        <br>The project is available in my Github, feel free to check it out and let me know what you think 😎
-                    </p>
-                </div>                
-            </div>
-        </div>
-    </section>
-    <section class="hidden">
-        <div class="music" id="music-section">
-            <h2>Music</h2>
-            <div>
-                <p>What ties everything together for me has always been music, playing guitar from a young age,
-                <br>and picking up more instruments as I grow.<br>For the games I make and just for pure fun and creative outlet, 
-                <br>I play and produce some music, here are some tunes I've made, hope you enjoy!
-                </p>
-            </div>
-            <div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030798&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/french-bot-tragedy" title="French Bot Tragedy" target="_blank" style="color: #cccccc; text-decoration: none;">French Bot Tragedy</a></div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030810&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/finally" title="Finally" target="_blank" style="color: #cccccc; text-decoration: none;">Finally</a></div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030789&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/miami-vice" title="Miami Vice" target="_blank" style="color: #cccccc; text-decoration: none;">Miami Vice</a></div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030822&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/dusk-drive" title="Dusk Drive" target="_blank" style="color: #cccccc; text-decoration: none;">Dusk Drive</a></div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030858&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/desert-flow" title="Desert Flow" target="_blank" style="color: #cccccc; text-decoration: none;">Desert Flow</a></div>
-                <iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030834&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/dream" title="Dream" target="_blank" style="color: #cccccc; text-decoration: none;">Dream</a></div>
-            </div>
-        </div>
-    </section>
-    <section class="hidden">
-        <div class="contact" id="contact-section">
-            Contact
-        </div>
-    </section>
-    
-    <section class="hidden">
-        <div class="superlative" id="contact-section">
-            <iframe src="Games/pacific-drive-superlative/index.html" width="960" height="600" frameborder="0"></iframe>
-        </div>
-    </section>
+    <div id="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
