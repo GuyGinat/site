@@ -6,6 +6,8 @@ import { contact } from "./pages/contact.js";
 import { spinningRoles } from "./pages/games/spinning-roles.js";
 import { berto } from "./pages/games/berto.js";
 import { jjj } from "./pages/games/jjj.js";
+import { damnPusher } from "./pages/games/damn-pusher.js";
+import { belgrad } from "./pages/games/belgrad.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const contentDiv = document.getElementById("content");
@@ -23,13 +25,23 @@ document.addEventListener("DOMContentLoaded", function() {
         contact,
         spinningRoles,
         berto,
-        jjj
+        jjj,
+        damnPusher,
+        belgrad,
     };
 
     
 
     function loadPage(page) {
-        console.log("Loading page:", page);
+        console.log(`Loading page: ${page}`);
+        if (!pages[page]) {
+            console.error(`Page ${page} not found`);
+            return;
+        }
+
+        // Set the URL hash to match the current page
+        window.location.hash = page;
+
         if (currentPage) {
             // Slide out the current section
             currentPage.classList.add('slide-out');
@@ -100,18 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-
-    // Function to load a game page based on the `data-game` attribute
-    function loadGamePage(gameId) {
-        const gameContent = individualGames[gameId];
-        if (gameContent) {
-            document.getElementById("content").innerHTML = gameContent;
-        } else {
-            console.error("Game page not found for:", gameId);
-        }
-    }
-
-
     function addGameCardListeners() {
         document.querySelectorAll(".game-card").forEach(card => {
             card.addEventListener("click", () => {
@@ -131,7 +131,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Load the default content on page load (e.g., About page)
-    loadPage("about");
+    const hashPage = window.location.hash.substring(1);
+    if (hashPage && pages[hashPage]) {
+        loadPage(hashPage);
+    } else {
+        loadPage("about"); // Default page
+    }
 });
 
 

@@ -7,6 +7,9 @@ export const spinningRoles = /*html*/`
             I wanted to build a game that does not use the classical definition of a dice, utilizing mechanics of randomness,
             <br>but rather focus on what happens when the dice rolls, resulting in a gravity based 3D puzzle game
             </p>
+            <div class="playable" id="contact-section">
+                <iframe src="Games/spinning-roles/index.html" width="80%" height="700" frameborder="0"></iframe>
+        </div>
             <div class="images">
                 <img src="./assets/roles1.jpg" alt="">
                 <img src="./assets/roles-gamplay.PNG" alt="">

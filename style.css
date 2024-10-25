@@ -165,46 +165,7 @@ section {
     border-radius: 8px;
 }
 
-@media (max-width: 480px) {
-    .games h2 {
-        font-size: 1.5rem;
-    }
 
-    .games p {
-        font-size: 0.9rem;
-        padding: 0 0.5rem;
-    }
-    .games, .music{
-        padding-top: 10%;
-    }
-    nav ul {
-        gap: 1rem;
-    }
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    /* Stack images vertically on smaller screens */
-    .images {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding-bottom: 2rem;
-    } 
-
-    .games h2 {
-        font-size: 1.8rem; /* Adjust heading size for readability */
-    }
-
-    .games p {
-        font-size: 1rem;
-        line-height: 1.5;
-        padding: 0 1rem; /* Add padding for better readability */
-    }
-
-    .games, .music {
-        padding-top: 10%;
-    }
-
-}
 
 /* Style for the dropdown menu */
 .dropdown {
@@ -260,6 +221,8 @@ section {
 
 /* Grid layout for game cards */
 .games-grid {
+    width: 80%;
+    margin-top: 5%;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -310,6 +273,7 @@ section {
     margin: 0.5rem 0;
 }
 
+
 .tags li {
     background-color: #444;
     border-radius: 4px;
@@ -318,9 +282,80 @@ section {
     color: #fff;
 }
 
+/* Specific styling for Web tag */
+.tags .tag-web {
+    background-color: #9a299a; /* Green for Web */
+}
+
+/* Specific styling for Download tag */
+.tags .tag-download {
+    background-color: #317936; /* Red for Download */
+}
+
 /* Game description */
 .game-content p {
     font-size: 1rem;
     color: #ccc;
     line-height: 1.4;
+}
+
+.playable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; Ensures it takes up the full viewport height */
+    padding: 2rem; /* Optional padding around the iframe */
+    box-sizing: border-box; /* Ensures padding doesn’t affect centering */
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .games h2 {
+        font-size: 1.5rem;
+    }
+
+    .games p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+    .games, .music{
+        padding-top: 10%;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+
+    .games-grid {
+        margin-top: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    /* Stack images vertically on smaller screens */
+    .images {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding-bottom: 2rem;
+    } 
+
+    .games h2 {
+        font-size: 1.8rem; /* Adjust heading size for readability */
+    }
+
+    .games p {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 1rem; /* Add padding for better readability */
+    }
+
+    .games, .music {
+        padding-top: 10%;
+    }
+
 }

@@ -1,20 +1,21 @@
 export const jjj = /*html*/`
     <section id="grad-start" class="hidden">
         <div class="games">
-        <h2>Berto</h2>
-        <p>Berto is a <span style="font-weight: bolder;">Keyboard Rage Game</span><br>
-            <br>Berto is a game where you controll a small pink guy, moving him across pillars<br>
-            that correspond to keyboard keys, crossing difficult keyboard traversing gauntlets and badass boss fights 
-            <br>The idea came from trying to utilize the whole keyboard, making it some sort of playground for your fingers
-            <br><br>This is not a typing game
+        <h2>Jiggle Jaggle Juggling</h2>
+        <p>A small arcadey game made for Stuio I class at the NYU Game Center for a physics game assignment.<br>
+        The game is meant to simulate the actual juggling experience.<br>
+        The best tip I can give for that is to try and always have one ball in the air, just like real juggling.<br><br>
+        There is also a leaderboard for the game, so you can check how good of a virtual juggler you are!
         </p>
-        <div class="images">
-            <img src="./assets/gold_fall.gif" alt="" height="300">
-            <img src="./assets/berto2.png" alt="" height="300">
-            <img src="./assets/sky_success.gif" alt="" height="300">
-            <img src="./assets/berto3.png" alt="" height="300">
+        
+        <div class="playable" id="contact-section">
+            <iframe src="Games/jjj/index.html" width="80%" height="700" frameborder="0"></iframe>
         </div>
         </div>
     </section>
 
 `
+
+//// <div class="images">            
+        //     <img src="./assets/jjj-game.jpg" alt="" height="300">            
+        // </div>
