@@ -4,82 +4,74 @@ import { web } from "./pages/web.js";
 import { music } from "./pages/music.js";
 import { contact } from "./pages/contact.js";
 import { spinningRoles } from "./pages/games/spinning-roles.js";
+import { berto } from "./pages/games/berto.js";
+import { jjj } from "./pages/games/jjj.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const contentDiv = document.getElementById("content");
     let currentPage = null;  // To track the currently visible section
 
+    const individualGames = {
+        "spinningRoles": spinningRoles,
+    };
+
     const pages = {
         about,
         games,
-        game1: `
-            <section id="grad-second" class="hidden">
-                <div class="games">
-                    <h2>Game 1</h2>
-                    <p>Details about Game 1...</p>
-                </div>
-            </section>
-        `,
-        game2: spinningRoles,
-        game3: `
-            <section id="grad-second" class="hidden">
-                <div class="games">
-                    <h2>Game 3</h2>
-                    <p>Details about Game 3...</p>
-                </div>
-            </section>
-        `,
         web,
         music,
-        contact
+        contact,
+        spinningRoles,
+        berto,
+        jjj
     };
 
-    function loadPage(page) {
-        if (currentPage) {
-            // Step 1: Slide the current section out
-            currentPage.classList.add('slide-out');
     
-            // Step 2: Wait for the slide-out animation to finish
-            currentPage.addEventListener('transitionend', function() {
-                // Remove the old content after sliding out
+
+    function loadPage(page) {
+        console.log("Loading page:", page);
+        if (currentPage) {
+            // Slide out the current section
+            currentPage.classList.add('slide-out');
+            currentPage.addEventListener('transitionend', function () {
+                // Clear old content
                 contentDiv.innerHTML = pages[page];
     
-                // Step 3: Apply the new section (start hidden)
+                // Load the new section
                 const newSection = contentDiv.querySelector("section");
+                newSection.classList.add('hidden'); // Start hidden for slide-in effect
     
-                // Ensure the new section starts hidden (off-screen to the left)
-                newSection.classList.add('hidden');
-    
-                // Step 4: Trigger the slide-in with a delay
+                // Trigger slide-in animation
                 setTimeout(() => {
                     newSection.classList.add('show');
                     newSection.classList.remove('hidden');
-                }, 501);  // Add a slight delay (100ms) to ensure transition registers
+                }, 100);
     
                 // Update the current page reference
                 currentPage = newSection;
     
-                // Reapply IntersectionObserver to the new elements
+                // If loading the games page, attach card event listeners
+                if (page === "games") {
+                    addGameCardListeners();
+                }
+    
+                // Reapply IntersectionObserver
                 applyIntersectionObserver();
             }, { once: true });
         } else {
-            // First load (no current page)
+            // First-time load
             contentDiv.innerHTML = pages[page];
             const newSection = contentDiv.querySelector("section");
-    
-            // Ensure the new section starts hidden (off-screen to the left)
-            newSection.classList.add('hidden');
-    
-            // Trigger the slide-in with a delay
+            newSection.classList.add('hidden'); // Start hidden
             setTimeout(() => {
                 newSection.classList.add('show');
                 newSection.classList.remove('hidden');
-            }, 100);  // Add a slight delay (100ms)
-    
+            }, 100);
             currentPage = newSection;
             applyIntersectionObserver();
         }
     }
+    
     
     
     
@@ -107,6 +99,40 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+
+
+    // Function to load a game page based on the `data-game` attribute
+    function loadGamePage(gameId) {
+        const gameContent = individualGames[gameId];
+        if (gameContent) {
+            document.getElementById("content").innerHTML = gameContent;
+        } else {
+            console.error("Game page not found for:", gameId);
+        }
+    }
+
+
+    function addGameCardListeners() {
+        document.querySelectorAll(".game-card").forEach(card => {
+            card.addEventListener("click", () => {
+                const gameId = card.getAttribute("data-game");
+                loadPage(gameId);
+            });
+        });
+    }
+    
+    // Simplified header link click handling
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const page = this.getAttribute("data-page");
+            loadPage(page);
+        });
+    });
+
     // Load the default content on page load (e.g., About page)
     loadPage("about");
 });
+
+
+

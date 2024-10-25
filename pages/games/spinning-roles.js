@@ -8,10 +8,10 @@ export const spinningRoles = /*html*/`
             <br>but rather focus on what happens when the dice rolls, resulting in a gravity based 3D puzzle game
             </p>
             <div class="images">
-                <img src="./assets/roles1.jpg" alt="" height="300">
-                <img src="./assets/roles-gamplay.PNG" alt="" height="300">
-                <img src="./assets/roles-menu.PNG" alt="" height="300">
-                <img src="./assets/roles-gif.gif" alt="" height="300">
+                <img src="./assets/roles1.jpg" alt="">
+                <img src="./assets/roles-gamplay.PNG" alt="">
+                <img src="./assets/roles-menu.PNG" alt="">
+                <img src="./assets/roles-gif.gif" alt="">
             </div>
         </div>
     </section>

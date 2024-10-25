@@ -7,8 +7,8 @@ export const about = /*html*/`
         </p>
         <br>
         <p>
-            I'm currently doing an MFA in Game Design at the Game Center in NYU.<br>
-            Before this, I was a lead developer at a small mobile games studio, and before that, a full stack developer at another startup.
+            I'm currently pursuing an MFA in Game Design at the NYU Game Center.<br>
+            Before this, I was a lead Unity developer at a small mobile games studio, before that, a full stack developer at a tech startup.
         </p>
         <br>
         <p>
