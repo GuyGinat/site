@@ -93,6 +93,7 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0); /* Move to the center */
+    padding: 0rem 2rem;
 }
 
 /* New class for sections that are sliding out */
