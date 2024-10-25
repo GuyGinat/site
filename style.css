@@ -123,8 +123,41 @@ section {
     text-align: center;
 }
 
-.games {
-    padding: 2rem;
+
+
+@media (max-width: 480px) {
+    .games h2 {
+        font-size: 1.5rem;
+    }
+
+    .games p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    /* Stack images vertically on smaller screens */
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .games h2 {
+        font-size: 1.8rem; /* Adjust heading size for readability */
+    }
+
+    .games p {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 1rem; /* Add padding for better readability */
+    }
+
+    /* Optional: Adjust image height for consistency */
+    .images img {
+        height: auto;
+    }
 }
 
 /* Style for the dropdown menu */
@@ -171,9 +204,23 @@ section {
 }
 
 
+/* Spinning Roles container */
+.games {
+    padding: 1rem;
+    padding-top: 10%;
+    text-align: left;
+}
 
+/* Image container styling */
 .images {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.images img {
+    max-width: 100%; /* Ensure images don’t overflow */
+    height: auto;
+    border-radius: 8px;
 }

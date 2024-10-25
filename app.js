@@ -3,6 +3,7 @@ import { games } from "./pages/games.js";
 import { web } from "./pages/web.js";
 import { music } from "./pages/music.js";
 import { contact } from "./pages/contact.js";
+import { spinningRoles } from "./pages/games/spinning-roles.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const contentDiv = document.getElementById("content");
@@ -19,14 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </section>
         `,
-        game2: `
-            <section id="grad-second" class="hidden">
-                <div class="games">
-                    <h2>Game 2</h2>
-                    <p>Details about Game 2...</p>
-                </div>
-            </section>
-        `,
+        game2: spinningRoles,
         game3: `
             <section id="grad-second" class="hidden">
                 <div class="games">
