@@ -21,6 +21,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </section>
         `,
+        game1: `
+            <section id="grad-second" class="hidden">
+                <div class="games">
+                    <h2>Game 1</h2>
+                    <p>Details about Game 1...</p>
+                </div>
+            </section>
+        `,
+        game2: `
+            <section id="grad-second" class="hidden">
+                <div class="games">
+                    <h2>Game 2</h2>
+                    <p>Details about Game 2...</p>
+                </div>
+            </section>
+        `,
+        game3: `
+            <section id="grad-second" class="hidden">
+                <div class="games">
+                    <h2>Game 3</h2>
+                    <p>Details about Game 3...</p>
+                </div>
+            </section>
+        `,
         web: `
             <section class="hidden">
                 <div class="web">
@@ -31,17 +55,35 @@ document.addEventListener("DOMContentLoaded", function() {
         `,
         music: `
             <section class="hidden">
-                <div class="music">
-                    <h2>Music</h2>
-                    <p>Music ties everything together for me, from playing guitar to producing...</p>
+                <div class="music" id="music-section">
+            <h2>Music</h2>
+            <div>
+                <p>What ties everything together for me has always been music, playing guitar from a young age,
+                <br>and picking up more instruments as I grow.<br>For the games I make and just for pure fun and creative outlet, 
+                <br>I play and produce some music, here are some tunes I've made, hope you enjoy!
+                </p>
+            </div>
+            <div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030798&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/french-bot-tragedy" title="French Bot Tragedy" target="_blank" style="color: #cccccc; text-decoration: none;">French Bot Tragedy</a></div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030810&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/finally" title="Finally" target="_blank" style="color: #cccccc; text-decoration: none;">Finally</a></div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030789&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/miami-vice" title="Miami Vice" target="_blank" style="color: #cccccc; text-decoration: none;">Miami Vice</a></div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030822&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/dusk-drive" title="Dusk Drive" target="_blank" style="color: #cccccc; text-decoration: none;">Dusk Drive</a></div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030858&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/desert-flow" title="Desert Flow" target="_blank" style="color: #cccccc; text-decoration: none;">Desert Flow</a></div>
+                <iframe width="100%" height="90" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345030834&color=%23d4447c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/guy-ginat-548264090" title="Guy Ginat" target="_blank" style="color: #cccccc; text-decoration: none;">Guy Ginat</a> · <a href="https://soundcloud.com/guy-ginat-548264090/dream" title="Dream" target="_blank" style="color: #cccccc; text-decoration: none;">Dream</a></div>
                 </div>
+            </div>
             </section>
         `,
         contact: `
             <section class="hidden">
                 <div class="contact">
                     <h2>Contact</h2>
-                    <p>Get in touch with me via email at example@example.com.</p>
+                <p>Get in touch with me!</p>
+                <ul class="contact-list">
+                    <li><span>Email:</span> <a href="mailto:guyginat4@gmail.com">guyginat4@gmail.com</a></li>
+                    <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/guy-ginat/" target="_blank">https://www.linkedin.com/in/guy-ginat/</a></li>
+                    <li><span>Itch.io:</span> <a href="https://guyginat.itch.io/" target="_blank">https://guyginat.itch.io/</a></li>
+                </ul>
                 </div>
             </section>
         `
@@ -67,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     newSection.classList.add('show');
                     newSection.classList.remove('hidden');
-                }, 1000);  // Add a slight delay (100ms) to ensure transition registers
+                }, 501);  // Add a slight delay (100ms) to ensure transition registers
     
                 // Update the current page reference
                 currentPage = newSection;
