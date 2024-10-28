@@ -8,14 +8,11 @@ import { berto } from "./pages/games/berto.js";
 import { jjj } from "./pages/games/jjj.js";
 import { damnPusher } from "./pages/games/damn-pusher.js";
 import { belgrad } from "./pages/games/belgrad.js";
+import { superlative } from "./pages/projects/superlative.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const contentDiv = document.getElementById("content");
     let currentPage = null;  // To track the currently visible section
-
-    const individualGames = {
-        "spinningRoles": spinningRoles,
-    };
 
     const pages = {
         about,
@@ -28,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         jjj,
         damnPusher,
         belgrad,
+        superlative
     };
 
     
