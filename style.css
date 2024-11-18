@@ -309,6 +309,19 @@ section {
 }
 
 
+.games a {
+    color: #4e91ea; /* Replace with your desired color */
+    text-decoration: none; /* Removes the underline */
+}
+
+.games a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.games a:visited {
+    color: #4e91ea; /* Same color for visited links to avoid purple */
+}
+
 
 
 

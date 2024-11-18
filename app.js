@@ -9,6 +9,9 @@ import { jjj } from "./pages/games/jjj.js";
 import { damnPusher } from "./pages/games/damn-pusher.js";
 import { belgrad } from "./pages/games/belgrad.js";
 import { superlative } from "./pages/projects/superlative.js";
+import { githubGists } from "./pages/projects/github-gists.js";
+import { superSession } from "./pages/projects/super-session.js";
+import { noteman } from "./pages/projects/noteman.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const contentDiv = document.getElementById("content");
@@ -25,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
         jjj,
         damnPusher,
         belgrad,
-        superlative
+        superlative,
+        githubGists,
+        superSession,
+        noteman
     };
 
     
@@ -62,6 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
                 // If loading the games page, attach card event listeners
                 if (page === "games") {
+                    addGameCardListeners();
+                }
+                if (page === "web") {
                     addGameCardListeners();
                 }
     

@@ -6,7 +6,8 @@ export const berto = /*html*/`
             <br>Berto is a game where you control a small pink thing, moving him across pillars<br>
             that correspond to keyboard keys, crossing difficult keyboard traversing gauntlets and badass boss fights.
             <br>The idea came from trying to utilize the whole keyboard, making it some sort of playground for your fingers
-            <br><br>This is not a typing game
+            <br><br>This is not a typing game<br>
+            <a href="https://guyginat.itch.io/berto" target="_blank">Download</a>
         </p>
         <div class="images">
             <img src="./assets/gold_fall.gif" alt="" height="300">
