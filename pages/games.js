@@ -63,8 +63,7 @@ export const games = /*html*/`
                 </ul>
                 <p>A proof-of-concept project exploring a real-time-play horror game in a confined space.</p>
             </div>
-        </div>           
-        <!-- Add additional game-card divs for each game here -->
+        </div>     
     </div>
 </section>
 `;
